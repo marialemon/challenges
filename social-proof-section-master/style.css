@@ -1,0 +1,215 @@
+.attribution {
+  color: hsl(303, 10%, 53%);
+  top: 0;
+  font-size: 11px;
+  padding: 1rem;
+  position: absolute;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+body {
+  background-attachment: fixed;
+  background-image: url(/Cursos/Retos/social-proof-section-master/images/bg-pattern-bottom-desktop.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  font-size: 15px;
+  font-family: "Spartan", sans-serif;
+  height: 100vh;
+  width: 100vw;
+}
+
+.background{
+  background-image: url(/Cursos/Retos/social-proof-section-master/images/bg-pattern-bottom-desktop.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  height: 40%;
+  rotate: 180deg;
+  width: 50%;
+}
+
+.main {
+  
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  height: 70%;
+  width: 75%;
+
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "title rates"
+    "reviews reviews";
+}
+
+.main > .title {
+  color: hsl(300, 43%, 22%);
+}
+
+.title > h1{
+  margin: 0;
+}
+
+.title > p{
+  color: hsl(303, 10%, 53%);
+  line-height: 18pt;
+}
+
+.main > .rates {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 1rem;
+}
+
+.rates > .rate {
+  align-items: center;
+
+  background-color: hsl(300, 24%, 96%);
+  border-radius: 0.5rem;
+  color: hsl(300, 43%, 22%);
+
+  display: flex;
+  font-size: 9pt;
+  font-weight: 700;
+  gap: .5rem;
+  padding: 1rem 2rem;
+  
+
+}
+
+.rate > .star{
+  background-image: url(/Cursos/Retos/social-proof-section-master/images/icon-star.svg);
+  height: 16px;
+  width: 85px;
+}
+
+.rate:first-child {
+  align-self: flex-start;
+}
+
+.rate:nth-child(2) {
+  align-self: center;
+}
+
+.rate:last-child {
+  align-self: flex-end;
+}
+
+.cards {
+  display: flex;
+
+  grid-area: reviews;
+  gap: 1rem;
+}
+
+.cards > .review {
+  background-color: hsl(300, 43%, 22%);
+  border-radius: 0.5rem;
+  color: white;
+  font-size: 9pt;
+  height: 60%;
+  line-height: 14pt;
+  padding: 1.5rem;
+  
+}
+
+.review:first-child{
+  align-self: flex-start;
+}
+
+.review:nth-child(2){
+  align-self: center;
+}
+
+.review:last-child{
+  align-self: flex-end;
+}
+
+.persona{
+  align-items: center;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 1rem;
+
+
+}
+
+.persona > img {
+  border-radius: 2rem;
+  height: 50px;
+  width: 50px;
+}
+
+.name > h4{
+  line-height: 0pt;
+}
+
+.name > p{
+  color: hsl(333, 80%, 67%);
+  line-height: 0pt;
+}
+
+
+/* MÓVIL */
+
+@media only screen and (max-width: 700px){
+
+  .main {
+    text-align: center;
+  
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+
+
+  .main > .rates {
+    display: flex;
+    align-items: center;
+    flex-flow: column wrap;
+    flex-grow: 1;
+    justify-content: center;
+    
+  }
+
+  .rates > .rate{
+    align-self: stretch;
+    justify-content: center;
+
+    display: flex;
+    flex-flow: column wrap;
+    gap: .7rem;
+  }
+
+  .cards {
+    display: flex;
+    flex-flow: row wrap;  }
+  
+  .cards > .review {
+    background-color: hsl(300, 43%, 22%);
+    border-radius: 0.5rem;
+    color: white;
+    font-size: 9pt;
+    text-align: left;
+    height: min-content;
+    line-height: 14pt;
+    padding: 1.5rem;
+    
+  }
+
+  .review:last-child{
+    margin-bottom: 6rem;
+  }
+ 
+
+}

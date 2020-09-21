@@ -1,0 +1,143 @@
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* ALL */
+
+body {
+  background-color: hsl(0, 0%, 98%);
+  color: hsl(234, 12%, 34%);
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+}
+
+.attribution {
+  padding: 1rem;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* MOBILE FIRST */
+
+header {
+  text-align: center;
+}
+
+.title > h1,
+h2 {
+  font-size: 18pt;
+  line-height: 23pt;
+}
+
+.title > h1 {
+  font-weight: 200;
+}
+
+p {
+  color: hsl(229, 6%, 66%);
+}
+
+header,
+.main {
+  margin: 2rem auto;
+  width: 90vw;
+}
+
+.main {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.main > .card {
+  background-color: white;
+  border-top: 4px solid hsl(180, 62%, 55%);
+  border-radius: 0.2rem;
+  box-shadow: 1px 5px 15px hsl(229, 6%, 66%);
+  padding: 1.2rem;
+  max-width: 350px;
+}
+
+.card:nth-child(2) {
+  border-top: 4px solid hsl(0, 78%, 62%);
+}
+
+.card:nth-child(3) {
+  border-top: 4px solid hsl(34, 97%, 64%);
+}
+
+.card:nth-child(4) {
+  border-top: 4px solid hsl(212, 86%, 64%);
+}
+
+.main > .card > p {
+  margin-bottom: 2rem;
+}
+
+.main > .card > img {
+  float: right;
+}
+
+/* DESKTOP */
+
+@media only screen and (min-width: 768px) {
+  body {
+    height: 100%;
+  }
+
+  header {
+    width: 60vw;
+  }
+
+  .title > h1,
+  h2 {
+    font-size: 22pt;
+    line-height: 32pt;
+  }
+
+  .main {
+    margin: 0 auto;
+    height: 450px;
+    width: 75vw;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      "supervisor team calculator"
+      "supervisor karma calculator";
+  }
+
+  .main > .card:first-child {
+    grid-area: supervisor;
+    align-self: center;
+  }
+
+  .main > .card:nth-child(2) {
+    grid-area: team;
+  }
+
+  .main > .card:nth-child(3) {
+    grid-area: karma;
+  }
+
+  .main > .card:nth-child(4) {
+    grid-area: calculator;
+    align-self: center;
+  }
+}
+
+/* MIN HEADER SIZE FOT MAX SCREEN */
+
+@media only screen and (min-width: 1000px) {
+  header {
+    width: 40vw;
+  }
+}
