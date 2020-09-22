@@ -6,10 +6,35 @@
     margin: 0;
 }
 
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+/*GENERAL*/
 
 body{
+    color: hsl(201, 11%, 66%);
     font-family: 'Bai Jamjuree', sans-serif;
     font-size: 18px;
+}
+
+h1, h2, h3, h4{
+    color: hsl(210, 10%, 33%);
+}
+
+footer{
+    background-color: hsl(0, 0%, 77%);
+    color: hsl(210, 10%, 33%);
+}
+
+button{
+    border: none;
+    border-radius: 1.5rem;
+    box-shadow: 1px 1px 20px hsl(0, 0%, 77%);
+    color: white;
+    padding: .6rem 1.2rem;
+}
+
+form > .iOS{
+    background: hsl(171, 66%, 44%);
+}
+
+form > .Mac{
+    background: hsl(233, 100%, 69%);
 }
