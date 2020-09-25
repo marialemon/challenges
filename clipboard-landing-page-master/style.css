@@ -28,7 +28,7 @@ h1, h2, h3, h4{
     text-align: center;
     line-height: 22pt;
 
-    padding: 80px 0;
+    padding: 50px 0;
     margin: 0 auto;
     width: 80%;
 
@@ -59,13 +59,22 @@ footer > ul > li > a{
 
 /*botones------------------------------------*/
 
-button{
+.button{
+    display: flex;
+    flex-flow: column wrap;
+    align-items: stretch;
+    gap: 1rem;
+}
+
+button {
     border: none;
     border-radius: 1.5rem;
     box-shadow: 1px 1px 20px hsl(0, 0%, 77%);
     color: white;
     padding: 1rem;
     font-size: 12pt;
+
+    
 }
 
 .iOS{
@@ -85,30 +94,29 @@ header{
     background-size: cover;
 }
 
-
 .main{
-    border: thin solid red;
-    gap: 3rem;
-    
-
-    
+    gap: 5rem;
 }
 
-.imagen{
-    margin: 50px 0;
-}
+
 
 .tools-workflow > dt > h3{
     display: flex;
     flex-flow: column wrap;
-    align-items: center
+    align-items: center;
+}
+
+.tools-workflow > dt > h3 > img{
+    margin: 20px;
 }
 
 .empresas{
     display: flex;
     flex-flow: column wrap;
     gap: 3em;
+    margin: 50px 0;
 }
+
 
 footer{
     display: flex;
