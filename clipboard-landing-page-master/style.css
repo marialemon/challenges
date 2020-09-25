@@ -17,10 +17,14 @@ body{
 h1, h2, h3, h4{
     color: hsl(210, 10%, 33%);
     line-height: 28pt;
+    margin: 1rem;
+}
+
+.logo{
+    margin: 0 auto;
 }
 
 #header, .main{
-    border: thin solid green;
     text-align: center;
     line-height: 22pt;
 
@@ -30,14 +34,28 @@ h1, h2, h3, h4{
 
     display: flex;
     flex-flow: column wrap;
-    align-items: center;
+    align-items: stretch;
     gap: 2rem;
 }
 
 footer{
-    background-color: hsl(0, 0%, 77%);
+    background-color: hsl(0, 0%, 93%);
+    text-align: center;
+    padding: 3rem 0;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    gap: 2rem;
+}
+
+footer > ul > li {
+    padding: .4em;
+}
+
+footer > ul > li > a{
     color: hsl(210, 10%, 33%);
 }
+
 
 /*botones------------------------------------*/
 
@@ -46,14 +64,15 @@ button{
     border-radius: 1.5rem;
     box-shadow: 1px 1px 20px hsl(0, 0%, 77%);
     color: white;
-    padding: .8rem 1.6rem;
+    padding: 1rem;
+    font-size: 12pt;
 }
 
-form > .iOS{
+.iOS{
     background: hsl(171, 66%, 44%);
 }
 
-form > .Mac{
+.Mac{
     background: hsl(233, 100%, 69%);
 }
 
