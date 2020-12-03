@@ -12,7 +12,7 @@
 
 body {
   background-attachment: fixed;
-  background-image: url(/Cursos/Retos/social-proof-section-master/images/bg-pattern-bottom-desktop.svg);
+  background-image: url(/Challenges/social-proof-section-master/images/bg-pattern-bottom-desktop.svg);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: right bottom;
@@ -23,7 +23,7 @@ body {
 }
 
 .background{
-  background-image: url(/Cursos/Retos/social-proof-section-master/images/bg-pattern-bottom-desktop.svg);
+  background-image: url(/Challenges/social-proof-section-master/images/bg-pattern-bottom-desktop.svg);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: left bottom;
@@ -88,7 +88,7 @@ body {
 }
 
 .rate > .star{
-  background-image: url(/Cursos/Retos/social-proof-section-master/images/icon-star.svg);
+  background-image: url(/Challenges/social-proof-section-master/images/icon-star.svg);
   height: 16px;
   width: 85px;
 }

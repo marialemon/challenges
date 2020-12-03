@@ -59,12 +59,6 @@ footer > ul > li > a{
 
 /*botones------------------------------------*/
 
-.button{
-    display: flex;
-    flex-flow: column wrap;
-    align-items: stretch;
-    gap: 1rem;
-}
 
 button {
     border: none;
@@ -74,7 +68,6 @@ button {
     padding: 1rem;
     font-size: 12pt;
 
-    
 }
 
 .iOS{
@@ -98,6 +91,12 @@ header{
     gap: 5rem;
 }
 
+.button{
+    display: flex;
+    flex-flow: column wrap;
+    align-items: stretch;
+    gap: 1rem;
+}
 
 
 .tools-workflow > dt > h3{
@@ -128,8 +127,30 @@ footer{
 
 @media only screen and (min-width: 768px){
 
+    #header, .main{
+        text-align: center;
+        line-height: 22pt;
+    
+        padding: 50px 0;
+        margin: 0 auto;
+        width: 80%;
+    
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        gap: 2rem;
+    }
 
+    .logo{
+        width: 100px;
+    }
 
+    .button{
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        gap: 1rem;
+    }
 
 
 }

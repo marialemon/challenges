@@ -1,0 +1,155 @@
+body {
+  background-color: #2660a4;
+
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+/* TÍTULO */
+
+header {
+  background-color: #22538b;
+  color: white;
+  padding: 2em;
+  margin-bottom: 3em;
+}
+
+header > h1,
+h2 {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+header > h1 {
+  font-size: 38pt;
+  line-height: 0;
+}
+
+header > h2 {
+  line-height: 0;
+}
+
+/* FORMULARIO */
+
+main {
+  margin: 0 auto;
+  max-width: 600px;
+  width: 90%;
+}
+
+main > form {
+  background-color: white;
+  border-radius: 6px;
+  box-shadow: 0px 5px 10px #00000050;
+  padding: 2.5rem;
+
+  display: flex;
+  flex-flow: column wrap;
+  gap: 3em;
+}
+
+form > fieldset {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 0.8em;
+}
+
+form > fieldset,
+legend {
+  border: thin solid #cacaca;
+  border-radius: 6px;
+  padding: 1em 2em;
+}
+
+fieldset > legend {
+  background-color: #cacaca;
+  padding: 0.5em;
+  font-weight: bold;
+}
+
+::placeholder {
+  color: #22538b;
+  opacity: 0.8;
+}
+
+.labelSuperpuesta {
+  background-color: white;
+  border-radius: 3px;
+
+  display: inline-table;
+
+  margin-left: 5px;
+  margin-bottom: -22px;
+
+  padding: 0 0.4em;
+
+  z-index: 2;
+}
+
+.valoracion {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  gap: 1em;
+}
+
+label > select {
+  border: thin solid #cacaca;
+  border-radius: 3px;
+  padding: 0.3em;
+}
+
+form input,
+button {
+  border: thin solid #cacaca;
+  border-radius: 3px;
+  padding: 0.7em;
+}
+
+input:focus {
+  border: thin solid #2660a4;
+  transition: 0.3s;
+}
+
+button {
+  background-color: #cacaca;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #9b9b9b;
+  transition: 0.3s;
+}
+
+.botones,
+div {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 1em;
+}
+
+#enviar {
+  background-color: #22538b;
+  color: white;
+  font-weight: bold;
+}
+
+#enviar:hover {
+  background-color: #193c64;
+}
+
+.botones > div {
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.botones > div > button {
+  width: 150px;
+}
+
+/* FOOTER */
+
+footer {
+  font-size: 10pt;
+  padding: 2rem;
+  text-align: center;
+}
