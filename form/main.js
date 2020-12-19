@@ -7,6 +7,7 @@ function verValor() {
   alert(`Has valorado con ${valor} estrellas`);
 }
 
+
 ///////// Ver Cuenta
 
 document.querySelector("#pais").value;
@@ -28,16 +29,16 @@ function verCuenta() {
   );
 }
 
+
 ///////// Ver Fecha
 
 function verFecha() {
   let fecha_con_tipo_domstring = document.getElementById("fecha").value;
   let fecha_con_tipo_date = new Date(fecha_con_tipo_domstring);
-  let dia_de_la_fecha = fecha_con_tipo_date.getDay();
 
   var fecha_conformato = new Intl.DateTimeFormat("es-ES", {
     weekday: "long",
-  }).format(dia_de_la_fecha);
+  }).format(fecha_con_tipo_date);
 
   alert(
     `La fecha seleccionada es ${fecha_con_tipo_domstring}, que cae en ${fecha_conformato}`

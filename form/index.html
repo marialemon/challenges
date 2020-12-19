@@ -26,34 +26,34 @@
             <fieldset>
                 <legend>Información Personal</legend>
 
-                <label class="labelSuperpuesta">
+                <label class="labelSuperpuesta" for="nombre">
                     Nombre
                 </label>
-                <input type="text" name="nombre" maxlength="30" placeholder="Marge" />
+                <input type="text" id="nombre" name="nombre" maxlength="30" placeholder="Marge" />
 
 
-                <label class="labelSuperpuesta">
+                <label class="labelSuperpuesta" for="apellidos">
                     Apellidos
                 </label>
-                <input type="text" name="apellidos" maxlength="60" placeholder="Simpson" />
+                <input type="text" id="apellidos" name="apellidos" maxlength="60" placeholder="Simpson" />
 
 
-                <label class="labelSuperpuesta">
+                <label class="labelSuperpuesta" for="direccion">
                     Dirección
                 </label>
-                <input type="text" name="direccion" maxlength="60" placeholder="Calle Falsa, 123, 1ºA" />
+                <input type="text" id="direccion" name="direccion" maxlength="60" placeholder="Calle Falsa, 123, 1ºA" />
 
 
-                <label class="labelSuperpuesta">
+                <label class="labelSuperpuesta" for="CP">
                     Código Postal
                 </label>
-                <input type="text" name="codigo_postal" maxlength="5" pattern="[0-9]{5}" placeholder="XXXXX" />
+                <input type="text" id="CP" name="codigo_postal" maxlength="5" pattern="[0-9]{5}" placeholder="XXXXX" />
 
 
-                <label class="labelSuperpuesta">
+                <label class="labelSuperpuesta" for="localidad">
                     Localidad
                 </label>
-                <input type="text" name="localidad" placeholder="Springfield" />
+                <input type="text" id="localidad" name="localidad" placeholder="Springfield" />
 
 
             </fieldset>
@@ -170,7 +170,7 @@
                 <br>
 
                 <div>
-                    <button type="button" name="ver_valoracion" onclick="verValor();"> <img src="star-regular.svg"
+                    <button type="button" name="ver_valoracion" onclick="verValor()"> <img src="star-regular.svg"
                             alt="ver valoración" width="24px"> <br> Ver valoración</button>
                     <button type="button" name="ver_cuenta" onclick="verCuenta();"> <img src="user-regular.svg" alt="ver cuenta"
                             width="20px">
