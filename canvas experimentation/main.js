@@ -10,6 +10,9 @@ canvas.height = window.innerHeight;
 
 let particleArray = [];
 
+//número de partículas, 70, sigue en línea 69
+const numberOfParticles = 70;
+
 
 
 // Create particles
@@ -18,10 +21,10 @@ class Particle{
     constructor(x, y){
         this.x = x;
         this.y = y;
-        this.size = 10;
+        this.size = Math.random() * 15 + 1;
 
         //peso/velocidad de las partículas
-        this.weight = 2;
+        this.weight = Math.random() * 1 + 1;
 
         //dirección de caida
         this.directionX = -2;
@@ -33,7 +36,7 @@ class Particle{
             this.y = 0 - this.size;
 
             //reset la velocidad original cuando va too fast
-            this.weight = 2;
+            this.weight = Math.random() * 1 + 1;
             
             // para que las partículas caigan randomly all over the canvas
             this.x = Math.random() * canvas.width;
@@ -42,7 +45,7 @@ class Particle{
 
 
         //para controlar la velocidad de la caida
-        this.weight += 0.15; 
+        this.weight += 0.01; 
         this.y += this.weight;
 
         //la dirección de caida
@@ -61,11 +64,30 @@ class Particle{
     }
 }
 
+
+//Hacer muchas partículas
+function init(){
+    for (let i = 0; i< numberOfParticles; i++){
+
+        //para que las partículas aparezcan randomly
+        const x = Math.random() * canvas.width;
+        const y = Math.random() * canvas.height;
+
+        particleArray.push(new Particle(x, y))
+    }
+    console.log(particleArray);
+}
+init();
+
+/* Esto ya no nos hace falta porque hemos creado 200 particles
+
 //partícula 1, amarilla
 const particle1 = new Particle(400, 10) //x and y coordinates
 
-//partícula 2, azul
+//partícula 2
 const particle2 = new Particle(300, 40)
+
+*/
 
 
 function animate(){
@@ -76,10 +98,19 @@ function animate(){
     //exact same size of the canvas
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-    particle1.update();
-    particle1.draw();
-    particle2.update();
-    particle2.draw();
+    for (let i = 0; i < particleArray.length; i++){
+        particleArray[i].update();
+        particleArray[i].draw();
+    }
+
+/*
+particle1.update();
+particle1.draw();
+particle2.update();
+particle2.draw();
+*/
+
     requestAnimationFrame(animate);
 }
+
 animate();
