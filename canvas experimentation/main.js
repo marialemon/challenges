@@ -13,6 +13,10 @@ let particleArray = [];
 //número de partículas, 70, sigue en línea 69
 const numberOfParticles = 70;
 
+//random color
+
+const randomColor = Math.floor(Math.random()*16777215).toString(16);
+
 
 
 // Create particles
@@ -53,10 +57,10 @@ class Particle{
     }
 
     draw(){
-        ctx.fillStyle = '#ffcc00';
+        ctx.fillStyle = '#' + randomColor;
         ctx.beginPath(); //to start drawing
         ctx.arc(
-            this.x, this.y, this.size, //where we want to draw out shape
+            this.x, this.y, this.size,//where we want to draw out shape
             0, //start in 0 degrees
             Math.PI *2) //ends in 360 degrees
             ctx.closePath();
