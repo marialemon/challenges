@@ -19,21 +19,38 @@ class Particle{
         this.x = x;
         this.y = y;
         this.size = 10;
+
+        //peso/velocidad de las partículas
         this.weight = 2;
-        this.directionX = 1;
+
+        //dirección de caida
+        this.directionX = -2;
     }
     
     update(){
         //when the particle falls down, it comes again
-        if (this.y > canvas.height) this.y = 0 - this.size;
+        if (this.y > canvas.height) {
+            this.y = 0 - this.size;
+
+            //reset la velocidad original cuando va too fast
+            this.weight = 2;
+            
+            // para que las partículas caigan randomly all over the canvas
+            this.x = Math.random() * canvas.width;
+            this.y = Math.random() * canvas.height;
+        }
 
 
-        this.weight += 0.01; //the longer they fall the heavier they get
+        //para controlar la velocidad de la caida
+        this.weight += 0.15; 
         this.y += this.weight;
+
+        //la dirección de caida
+        this.x += this.directionX;
     }
 
     draw(){
-        ctx.fillStyle = 'yellow';
+        ctx.fillStyle = '#ffcc00';
         ctx.beginPath(); //to start drawing
         ctx.arc(
             this.x, this.y, this.size, //where we want to draw out shape
@@ -44,7 +61,12 @@ class Particle{
     }
 }
 
+//partícula 1, amarilla
 const particle1 = new Particle(400, 10) //x and y coordinates
+
+//partícula 2, azul
+const particle2 = new Particle(300, 40)
+
 
 function animate(){
     //white color with very low opacity
@@ -56,6 +78,8 @@ function animate(){
 
     particle1.update();
     particle1.draw();
+    particle2.update();
+    particle2.draw();
     requestAnimationFrame(animate);
 }
 animate();
