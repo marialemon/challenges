@@ -1,0 +1,10 @@
+#canvas1{
+    background-color: grey;
+    height: 90%;
+    width: 90%;
+
+
+    position: absolute;
+
+    z-index: -10;
+}
