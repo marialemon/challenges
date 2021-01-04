@@ -31,7 +31,7 @@ class Particle{
         this.weight = Math.random() * 1 + 1;
 
         //dirección de caida
-        this.directionX = -2;
+        this.directionX = -4;
     }
     
     update(){
