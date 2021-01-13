@@ -1,0 +1,112 @@
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  /*outline: thin solid red;*/
+}
+
+:root {
+  --VeryDarkGrayishBlue: hsl(217, 19%, 35%);
+  --DesaturatedDarkBlue: hsl(214, 17%, 51%);
+  --GrayishBlue: hsl(212, 23%, 69%);
+  --LightGrayishBlue: hsl(210, 46%, 95%);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%) ;
+}
+
+/* ALL */
+
+body {
+  background-color: var(--LightGrayishBlue);
+  font-family: "Manrope", sans-serif;
+  font-size: 13px;
+}
+
+section {
+  background-color: white;
+  border-radius: 15px;
+  color: var(--VeryDarkGrayishBlue);
+  margin: 60px auto;
+  overflow: hidden;
+  width: 375px;
+
+
+  display: flex;
+  flex-flow: column wrap;
+  gap: 1rem;
+}
+
+#image {
+  background-image: url(images/drawers.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 240px;
+}
+
+.post {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 1rem;
+
+  padding: 1rem 2rem;
+}
+
+.post > p {
+  line-height: 20px;
+}
+
+.author {
+  padding: 0 2rem;
+  padding-bottom: 2rem;
+
+  display: grid;
+  grid-template-columns: 60px 1fr 42px;
+  align-items: center;
+}
+
+.author > img {
+  border-radius: 50%;
+}
+
+.author > span > p {
+  color: var(--GrayishBlue);
+  margin-top: 4px;
+}
+
+#share {
+  background-color: var(--LightGrayishBlue);
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 0.8rem;
+
+  z-index: 10;
+}
+
+/*----------*/
+
+#active_share {
+  background-color: var(--VeryDarkGrayishBlue);
+  color: var(--GrayishBlue);
+  font-weight: bold;
+  letter-spacing: 5px;
+  padding: 1.4rem 2rem;
+  width: 375px;
+
+  display: flex;
+  flex-flow: row wrap;
+  gap: 1.2rem;
+  align-items: center;
+
+
+  visibility: hidden;
+}
