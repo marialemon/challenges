@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="normalize.css">
+
+    <title>María Núñez - Samsung DesArrolladoras Lab</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>Alta Telefónica</h1>
+        <h2>Formulario de información</h2>
+    </header>
+
+    <main>
+
+        <form>
+
+            <fieldset>
+                <legend>Información Personal</legend>
+
+                <label class="labelSuperpuesta" for="nombre">
+                    Nombre
+                </label>
+                <input type="text" id="nombre" name="nombre" maxlength="30" placeholder="Marge" />
+
+
+                <label class="labelSuperpuesta" for="apellidos">
+                    Apellidos
+                </label>
+                <input type="text" id="apellidos" name="apellidos" maxlength="60" placeholder="Simpson" />
+
+
+                <label class="labelSuperpuesta" for="direccion">
+                    Dirección
+                </label>
+                <input type="text" id="direccion" name="direccion" maxlength="60" placeholder="Calle Falsa, 123, 1ºA" />
+
+
+                <label class="labelSuperpuesta" for="CP">
+                    Código Postal
+                </label>
+                <input type="text" id="CP" name="codigo_postal" maxlength="5" pattern="[0-9]{5}" placeholder="XXXXX" />
+
+
+                <label class="labelSuperpuesta" for="localidad">
+                    Localidad
+                </label>
+                <input type="text" id="localidad" name="localidad" placeholder="Springfield" />
+
+
+            </fieldset>
+
+            <fieldset>
+
+                <legend>Tipo de contratación</legend>
+
+                <label for="nuevo">
+                    <input type="radio" id="nuevo" name="contratacion" value="nuevo" checked>
+                    Nueva contratación
+                </label>
+
+                <label for="portabilidad">
+                    <input type="radio" id="portabilidad" name="contratacion" value="portabilidad">
+                    Portabilidad
+                </label>
+
+                <label for="cambio_contrato">
+                    <input type="radio" id="cambio_contrato" name="contratacion" value="cambio_contrato">
+                    Cambio de contrato
+                </label>
+
+                <label for="compania_actual">Elija la compañía actual &nbsp;
+                    <select name="compania_actual" id="compania_actual">
+                        <option value="movistar">Movistar</option>
+                        <option value="orange">Orange</option>
+                        <option value="vodafone">Vodafone</option>
+                        <option value="yoigo">Yoigo</option>
+                        <option value="no">No tengo compañía</option>
+                    </select>
+                </label>
+
+                <label for="nueva_compania">En caso de portabilidad, elija la nueva compañía &nbsp;
+                    <select name="nueva_compania" id="nueva_compania">
+                        <option value="movistar">Movistar</option>
+                        <option value="orange">Orange</option>
+                        <option value="vodafone">Vodafone</option>
+                        <option value="yoigo">Yoigo</option>
+                    </select>
+                </label>
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Datos bancarios</legend>
+
+                <label for="pais" class="labelSuperpuesta">País
+
+                </label>
+                <input id="pais" type="text" maxlength="2" placeholder="ES" value="ES" disabled>
+
+                <label for="control_iban" class="labelSuperpuesta">Control IBAN</label>
+                <input id="control_iban" type="text" maxlength="2" placeholder="XX" pattern="[0-9]{2}">
+
+                <label for="entidad" class="labelSuperpuesta">Entidad</label>
+                <input id="entidad" type="text" maxlength="4" placeholder="XXXX" pattern="[0-9]{4}">
+
+                <label for="sucursal" class="labelSuperpuesta">Sucursal</label>
+                <input id="sucursal" type="text" maxlength="4" placeholder="XXXX" pattern="[0-9]{4}">
+
+                <label for="dc" class="labelSuperpuesta">DC</label>
+                <input id="dc" type="text" maxlength="2" placeholder="XX" pattern="[0-9]{2}">
+
+                <label for="cuenta" class="labelSuperpuesta">Cuenta</label>
+                <input id="cuenta" type="text" maxlength="10" placeholder="XXXXXXXXXX" pattern="[0-9]{10}">
+
+            </fieldset>
+
+            <fieldset>
+                <legend>¿Cómo nos conoció?</legend>
+
+                <label>
+                    <input type="checkbox">
+                    A través de la TV
+                </label>
+
+                <label>
+                    <input type="checkbox">
+                    A través de la radio
+                </label>
+
+                <label>
+                    <input type="checkbox">
+                    En Internet
+                </label>
+
+                <label>
+                    <input type="checkbox">
+                    Otro
+                </label>
+
+                <div>
+
+                    <label class="valoracion"> Valoración
+                        <input type="range" id="valor" name="valor" min="1" max="5">
+                        1 - 5
+                    </label>
+                </div>
+
+                <label for="fecha">
+                    Fecha de la encuesta &nbsp;
+                    <input type="date" id="fecha" name="fecha" value="2019-01-01">
+                </label>
+
+
+            </fieldset>
+
+            <aside class="botones">
+
+                <button id="enviar" type="submit">Enviar</button>
+                <button type="reset">Restablecer</button>
+
+                <br>
+
+                <div>
+                    <button type="button" name="ver_valoracion" onclick="verValor()"> <img src="star-regular.svg"
+                            alt="ver valoración" width="24px"> <br> Ver valoración</button>
+                    <button type="button" name="ver_cuenta" onclick="verCuenta();"> <img src="user-regular.svg" alt="ver cuenta"
+                            width="20px">
+                        <br> Ver cuenta</button>
+                    <button type="button" name="ver_fecha" onclick="verFecha();"> <img src="calendar-alt-regular.svg"
+                            alt="ver fecha" width="20px"> <br> Ver fecha</button>
+                </div>
+            </aside>
+
+        </form>
+
+    </main>
+
+    <footer>
+        &copy; María Núñez
+        <br>
+        github.com/marialemon
+    </footer>
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>
