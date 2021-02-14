@@ -1,6 +1,5 @@
 ///////// Ver Valor
 
-document.querySelector("#valor").value;
 
 function verValor() {
   let valor = document.querySelector("#valor").value;
@@ -9,13 +8,6 @@ function verValor() {
 
 
 ///////// Ver Cuenta
-
-document.querySelector("#pais").value;
-document.querySelector("#control_iban").value;
-document.querySelector("#entidad").value;
-document.querySelector("#sucursal").value;
-document.querySelector("#dc").value;
-document.querySelector("#cuenta").value;
 
 function verCuenta() {
   let pais = document.querySelector("#pais").value;
