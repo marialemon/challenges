@@ -1,0 +1,108 @@
+:root {
+  --black: #141414;
+  --white: #eef0f2;
+  --yellow: #ffcc00;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+
+ /* outline: thin solid red;*/
+}
+
+body {
+  background-color: var(--white);
+  font-family: "Poppins", Helvetica, Arial, sans-serif;
+}
+
+header {
+  text-align: center;
+  padding: 2em;
+  color: var(--black);
+}
+
+/* FORMULARIO */
+
+form {
+  background-color: var(--black);
+  box-shadow: -10px 10px 0px var(--yellow);
+  color: var(--white);
+  font-size: 10pt;
+  margin: 1em auto;
+  max-width: 400px;
+  padding: 2em;
+
+  display: grid;
+  grid-template-areas:
+    "numero letra"
+    "boton boton"
+    "mensaje mensaje";
+  gap: 1em;
+}
+
+label {
+  color: var(--white);
+  display: flex;
+  flex-flow: column wrap;
+}
+
+#numero {
+  grid-area: numero;
+}
+
+#letra {
+  grid-area: letra;
+}
+
+input,
+button {
+  border: none;
+  padding: 0.8em;
+}
+
+input {
+  background: #ddd;
+}
+
+input:focus {
+  background: var(--white);
+  transition: 0.3s;
+}
+
+
+button {
+  background: var(--yellow);
+  cursor: pointer;
+  font-family: "Poppins", Helvetica, Arial, sans-serif;
+  grid-area: boton;
+}
+
+div{
+  grid-area: mensaje;
+}
+
+/* FIN DEL FORMULARIO */
+
+footer {
+  color: var(--black);
+  font-size: 10pt;
+  padding: 3em;
+  text-align: center;
+}
+
+
+
+/* Responsive */
+
+@media screen and (max-width: 440px){
+  form{
+    grid-template-areas:
+      "numero"
+      "letra"
+      "boton"
+      "mensaje";
+
+  }
+}

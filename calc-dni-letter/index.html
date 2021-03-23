@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DNI</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+
+        <h1>Calcula la letra de tu DNI</h1>
+        <h3>Introduce tu número de DNI y te diremos la letra que le corresponde</h3>
+
+    </header>
+
+    <form>
+
+        <label id="numero" for="DNI_numero">Número
+            <input type="text" id="DNI_numero" name="DNI_numero" maxlength="8" pattern="[0-9]{8}" placeholder="12345678">
+        </label>
+
+        <label id="letra" for="DNI_letra">Letra
+            <input type="text" id="DNI_letra" name="DNI_letra" maxlength="1" pattern="[A-Za-z]">
+        </label>
+
+        <button id="calcular" name="calcular" type="button" onclick="calcularLetra()">Calcular letra</button>
+
+    </form>
+
+    
+    <footer>
+        &copy; María Núñez
+        <br>
+        github.com/marialemon
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
